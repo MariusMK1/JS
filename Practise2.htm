@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript</title>
+	</head>
+<body>
+	<script>
+		document.body.innerHTML = "<div id=myDiv>hello world</div>"
+		let myX = document.getElementById('myDiv');
+		let css = myX.style;
+		css.border = "1px solid black";
+		css.backgroundColor = "lightgray";
+		css.padding = "20px";
+		myX.innerHTML += '<p id=myP>';
+		myX.innerHTML += 'content';
+		myX.innerHTML += '</p>';
+		let myP = document.getElementsByTagName ("P");
+		myP.style.padding = "0px";
+		myP.style.margin = "0px";
+		console.log (myP.innerHTML);
+		console.log (myX.innerHTML);
+		
+	</script>
+
+</body>
+</html>

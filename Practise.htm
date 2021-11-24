@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript</title>
+	</head>
+<body>
+	<div id="my-div">Old text</div>
+	<script>
+		console.log ('Hello world');
+		console.log ((1 + 2) * 5);
+		let myX = document.getElementById("my-div");
+		myX.innerHTML = '<div id="secondDiv"></div>';
+		let myY = document.getElementById("secondDiv");
+		myY.innerHTML += 'Hello World';
+		console.log (myX.innerHTML);
+		console.log (myY.innerHTML);
+	</script>
+
+</body>
+</html>
