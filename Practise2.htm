@@ -3,23 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <title>Javascript</title>
-	</head>
+</head>
 <body>
 	<script>
-		document.body.innerHTML = "<div id=myDiv>hello world</div>"
+		document.body.innerHTML = "<div id=myDiv></div>";
 		let myX = document.getElementById('myDiv');
 		let css = myX.style;
 		css.border = "1px solid black";
 		css.backgroundColor = "lightgray";
-		css.padding = "20px";
-		myX.innerHTML += '<p id=myP>';
-		myX.innerHTML += 'content';
-		myX.innerHTML += '</p>';
-		let myP = document.getElementsByTagName ("P");
-		myP.style.padding = "0px";
+		css.padding = "10px";
+		/*content added*/
+		myX.innerHTML += '<h1 id=myH1>hello world</h1>';
+		let myH1 = document.getElementById('myH1');
+		myH1.style.fontStyle = "italic";
+		myH1.style.textTransform = "uppercase";
+		myH1.style.padding = "0px";
+		myH1.style.margin = "0px";
+		myH1.style.color = "tomato";
+		/*content added*/
+		myX.innerHTML += '<p id=myP>This is my paragraph</p>';
+		let myP = document.getElementById ("myP");
+		myP.style.padding = "5px 10px";
 		myP.style.margin = "0px";
-		console.log (myP.innerHTML);
+		/*content added*/
+		myX.innerHTML +='<div id=mySecondDiv></div>';
+		let myY = document.getElementById('mySecondDiv');
+		myY.style.textAlign = 'center';
+		/*content added*/
+		myY.innerHTML += '<img id=myIMG src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="this is my picture">';
+		let myZ = document.getElementById('myIMG');
+		myZ.innerHTML = 'bye';
+		myZ.style.height = "200px";
+		myZ.style.width = "200px";
+		myZ.style.border = "10px solid black";
+		/*content added*/
+		myX.innerHTML += '<a id=myLink href="#">This is my link</a>';
+		let myU = document.getElementById('myLink');
+		myU.style.color = 'rgb(66,139,202)';
+		myU.style.textDecoration = 'none';
+		myU.style.fontSize = '1.5em';
+		/*Console logs*/
 		console.log (myX.innerHTML);
+		console.log (myH1.innerHTML);
+		console.log (myP.innerHTML);
+		console.log (myY.innerHTML);
+		console.log (myZ.innerHTML);
+		console.log (myU.innerHTML);
 		
 	</script>
 
