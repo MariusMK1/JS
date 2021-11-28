@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        a {
+            display: block;
+        }
+    </style>    
+</head>
+<body>
+    <button onclick="myFunction();" id="hide">Hide</button>
+        <div id="links">
+            <a href="">Menu</a>
+            <a href="">Menu1</a>
+            <a href="">Menu2</a>
+            <a href="">Menu3</a>
+            <a href="">Menu4</a>
+            <a href="">Menu5</a>
+            <a href="">Menu6</a>
+            <a href="">Menu7</a>
+            <a href="">Menu8</a>
+        </div>
+     <script>
+        function myFunction() {
+            document.getElementById("hide").innerHTML = "<div onclick='myFunction2();' id='show'>show</div>";
+            var x = document.getElementById("links");
+            x.style.display = "none";
+        }
+        function myFunction2() {
+            document.getElementById("show").innerHTML = myFunction();
+            var y = document.getElementById("links");
+            y.style.display = "";
+        }
+    </script>
+</body>
+</html>

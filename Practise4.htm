@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+        let a = 11;
+        let b = 10;
+        let sum = a + b;
+        if(sum%2 == 0) {
+            console.log("This number is equal");
+        }
+        else {
+            console.log("This number is odd");
+        }
+        /* let i = 10;
+        while (i <= 1000) {
+            if(i % 2 == 0) {
+            }
+            else {
+            console.log(i);
+            }
+            i += 1
+        }
+        for (let i = 10; i <= 1000; i++ ) {
+            if(i % 2 == 0) {
+            }
+            else {
+            console.log(i);
+            }
+        } */
+        for (let i = 10; i <= 1000; i++ ) {
+            if(i % 2 == 0) {
+            }
+            else {
+                if (i < 100) {
+                    let a = Math.floor(i % 10);
+                    let b = Math.floor(i/10 % 10);
+                    if (a != b){
+                        console.log(i);
+                    }
+                    else {
+                    }
+                }
+                else {
+                    let a = Math.floor(i % 10);
+                    let b = Math.floor(i/10 % 10);
+                    let c = Math.floor(i/100 % 10);
+                    if(a == b || a == c ) {
+                    }
+                    else { 
+                        if(b == c ) {
+                        }
+                        else {
+                            console.log(i);
+                        }
+                    }
+                }
+            }
+        }
+    </Script>
+</body>
+</html>
