@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+        /* 1 užduotis */
+        // let n = 20;
+        // if(n < 0) {
+        //     console.log("Skaičius yra blogas");
+        // }
+        // else {
+        //     console.log("Skaičius yra geras");
+        // } 
+
+        /* 2 užduotis */
+        // let n = 1;
+        // if(n == 1) {
+        //     console.log("Eikite");
+        // }
+        // if(n == 2) {
+        //     console.log("Palaukite");
+        // }
+        // if(n == 3) {
+        //     console.log("Neikite");
+        // }
+
+        /* 3 užduotis */
+        // let d = 3;
+        // let k = 18;
+        // let n = 5;
+        // while(d > 0) {
+        //     k = k - n;
+        //     d = d - 1;
+        // }
+        // if(k <= 0) {
+        //     console.log("Knygos telpa į dėžes"); 
+        // }
+        // else {
+        //     console.log("Knygos netelpa į dėžes");
+        // } 
+
+        /* 4 užduotis */
+        // let n = 1221;
+        // let a = Math.floor(n % 10);
+        // let b = Math.floor(n/10 % 10);
+        // let c = Math.floor(n/100 % 10);
+        // let d = Math.floor(n/1000 % 10);
+        // if(a == d) {
+        //     if(b == c) {
+        //         console.log("Skaičius polindromas");
+        //     }
+        //     else {
+        //     console.log("Skaičius nepolindromas");
+        //     }
+        // }
+        // else {
+        //     console.log("Skaičius nepolindromas");
+        // }
+
+        /* 5 užduotis */
+        // let n = 222442;
+        // let sum = 0;
+        // while (n) {
+        //     sum += n % 10;
+        //     n = Math.floor(n / 10);
+        // }
+        // if(sum % 4 == 0) {
+        //     console.log("Bilietas laimingas");
+        // }
+        // else {
+        //     console.log("Bilietas nelaimingas");
+        // }
+
+        /* 6 užduotis */
+        // let m = 2004;
+        // if(m % 4 == 0 && !(m % 100 == 0)) {
+        //     console.log("Metai yra keliamieji");
+        // }
+        // else{
+        //     console.log("Metai paprastieji");
+        // }
+
+        /* 7 užduotis */
+        // let n = 12321;
+        // let a = Math.floor(n % 10);
+        // let b = Math.floor(n/10 % 10);
+        // let c = Math.floor(n/100 % 10);
+        // let d = Math.floor(n/1000 % 10);
+        // let e = Math.floor(n/10000 % 10);
+        // if(a == e && b == d) {
+        //     console.log("Skaičius polindromas");
+        // }
+        // else {
+        //     console.log("Skaičius nepolindromas");
+        // }
+
+        /* 8 užduotis */
+        // let n = 6;
+        // if(n == 1 || n == 3 || n == 5) {
+        //     console.log("Kambary tvarkys jaunėlis");
+        // }
+        // else {
+        //     console.log("Kambary tvarkys vyresnėlis");
+        // }
+
+        /* 9 užduotis */
+        // let p1 = 9;
+        // let p2 = 9;
+        // let p3 = 5;
+        // if(p1 > p2 && p1 > p3){
+        //     console.log("Pirmas gavo geriausią pažymį");
+        // }
+        // else{
+        //     if(p2 > p3){
+        //         console.log("Antras gavo geriausią pažymį");
+        //     }
+        //     else{
+        //         console.log("Trečias gavo geriausią pažymį");
+        //     }
+        // }
+
+        /* 10 užduotis */
+        // let n = 1;
+        // if(n == 1 || n == 3 || n == 5 || n == 7 || n == 8 || n == 10 || n == 12) {
+        //     console.log("dienų skaičius 31");
+        // }
+        // if(n == 4 || n == 6 || n == 9 || n == 11) {
+        //     console.log("dienų skaičius 30");
+        // }
+        // if(n == 2) {
+        //     console,log("Dienų skaičius 28");
+        // }
+
+        /* 11 užduotis */
+        // let v1 = 8;
+        // let m1 = 29;
+        // let m2 = 43;
+        // let v = 9;
+        // let m = 5;
+        // v1 = v1 * 60;
+        // v = v * 60;
+        // let sum1 = v1 + m1 + m2;
+        // let sum = v + m;
+        // if(sum1 <= sum) {
+        //     console.log("Petras į pamoką nevėluos");
+        // }
+        // else{
+        //     let veluos = sum1 - sum;
+        //     console.log("Petras į pamoką pavėluos " + veluos + " minutes");
+        // }  
+        
+        /* 12 užduotis */
+        // let n = 6;
+        // if(n % 3 == 0 && n != 0) {
+        //     console.log("Trikampį sudėlioti galima");
+        // }
+        // else {
+        //     console.log("Trikampio sudėlioti negalima");
+        // }
+
+        /* 13 užduotis */
+        // let n = 1900;
+        // let a = n - 1896;
+        // if(a % 4 == 0 && a > 0) {
+        //     console.log("n=" + ((a/4)+1));
+        // }
+        // else{
+        //     if(a == 0){
+        //         console.log("n=1");
+        //     }
+        //     else{
+        //         console.log("Metai neolimpiniai");
+        //     }
+        // }
+
+        /* 14 užduotis */
+        // let a = 1, b = 4, c = 3;
+        // let D = (Math.pow(b, 2))-4*a*c;
+        // if(D > 0) {
+        //     console.log("Sprendinių skaičius 2.00");
+        // }
+        // else{
+        //     if(D < 0) {
+        //         console.log("Nėra sprendinių");
+        //     }
+        //     else {
+        //         console.log("Sprendinių skaičius 1.00")
+        //     }
+        // }
+
+        /* 15 užduotis */
+        // let p = 20, c = 50;
+        // if(c >= p) {
+        //     let k = Math.floor(c/p);
+        //     let m = c-p*k;
+        //     console.log("Saulius nusipirks " + k + " porcijas ledų ir jam liks " + m + " centų");
+        // }
+        // else{
+        //     console.log("Sauliui neužtenka pinigų");
+        // }
+
+        /* 16 užduotis */
+        // let n = 100;
+        // let m = 14;
+        // let k = Math.ceil(n/m);
+        // console.log("k = " + k);
+        
+        /* 17 užduotis */
+        // let a = 11, b = 10;
+        // if(a > b) {
+        //     a -= 1;
+        //     b += 1;
+        //     console.log("a = " + a);
+        //     console.log("b = " + b);
+        // }
+        // else {
+        //     if(a == b){
+        //         console.log("a = " + a);
+        //         console.log("b = " + b);
+        //     }
+        //     else {
+        //         a += 1;
+        //         b -= 1;
+        //         console.log("a = " + a);
+        //         console.log("b = " + b);
+        //     }
+        // }
+
+        /* 18 užduotis */
+        let a = 100, b = 20, c = 23, d = 4, e = 15, f = 65;
+        var dideja = [a, b, c, d, e, f];
+        dideja = dideja.sort(function(a, b){
+            return a - b;
+        });
+        console.log(dideja);
+        </script>
+    
+</body>
+</html>
