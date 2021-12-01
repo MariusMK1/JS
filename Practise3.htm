@@ -28,14 +28,15 @@
         </div>
      <script>
         function myFunction() {
-            document.getElementById("hide").innerHTML = "<div onclick='myFunction2();' id='show'>show</div>";
+            let y = document.getElementById("hide");
             var x = document.getElementById("links");
-            x.style.display = "none";
-        }
-        function myFunction2() {
-            document.getElementById("show").innerHTML = myFunction();
-            var y = document.getElementById("links");
-            y.style.display = "";
+            if(y.innerHTML == "Hide"){
+                y.innerHTML = "Show";
+                x.style.display = "none";
+            } else {
+                y.innerHTML = "Hide";
+                x.style.display = "block";
+            }
         }
     </script>
 </body>

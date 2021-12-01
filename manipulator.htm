@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulator</title>
+</head>
+<body>
+        content:
+        <input type="text" id="contBox" oninput="myFunction1()">
+    <p id="answer"></p>
+    <script>
+    let answer = document.getElementById("answer");
+        function myFunction1() {
+            let contBox = document.getElementById("contBox").value;
+            answer.innerHTML =contBox;    
+        }
+
+    </script>
+    
+</body>
+</html>
