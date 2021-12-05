@@ -4,18 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manipulator</title>
+    <style>
+        body {
+            margin: 0em;
+            padding: 0em;
+        }
+        div {
+            padding: 0.5em;
+        }
+    </style>
 </head>
-<body>
-        content:
+<body> 
+    <div>
+        <label for="contBox">Content:</label>
         <input type="text" id="contBox" oninput="myFunction1()">
+    </div>
+    <div>
+        <label for="contSize">Size:</label>
+        <input type="number" id="contSize" oninput="myFunction2()">
+        <span>Style:</span>
+        <input type="radio" id="contStyleBold" name="contStyle" value = "bold">
+        <label for="contStyle">Bold</label>
+        <input type="radio" id="contStyleItalic" name="contStyle" value = "italic">
+        <label for="contStyle">Italic</label>
+        <input type="radio" id="contStyleUnderline" name="contStyle" value = "underline" >
+        <label for="contStyle">Underline</label>
+    </div>
     <p id="answer"></p>
     <script>
     let answer = document.getElementById("answer");
         function myFunction1() {
             let contBox = document.getElementById("contBox").value;
-            answer.innerHTML =contBox;    
+            answer.innerHTML = contBox;    
         }
-
+        function myFunction2() {
+            let contSize = document.getElementById("contSize").value;
+            console.log(contSize);
+            answer.style.fontSize = contSize + "px";
+        }
     </script>
     
 </body>
