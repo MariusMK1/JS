@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+        /* 1 užduotis */
+        let n = [];
+        while (n.length < 30){
+            n.push(Math.floor((Math.random()*21)+5));
+        }
+        console.log(n);
+        console.log(n.length);
+
+        /* 2 užduotis */
+        let moreThan10 = 0;
+        let equalSum = 0;
+        for(let i = 0; i < n.length; i++){
+            if(n[i] > 10){
+                moreThan10 += 1;
+            }
+            /* NESIGAUNA!!!! */
+            // if(n[i] % 2 == 0){
+            //     equalSum = n;
+            // }
+            // console.log(n[i]);
+        }
+        console.log(moreThan10)
+    </script>
+    
+</body>
+</html>
