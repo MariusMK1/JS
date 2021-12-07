@@ -7,28 +7,118 @@
 </head>
 <body>
     <script>
-        /* 1 užduotis */
+        // /* 1 užduotis */
+        // let n = [];
+        // while (n.length < 30){
+        //     n.push(Math.floor((Math.random()*21)+5));
+        // }
+        // console.log(n);
+        // console.log(n.length);
+
+        // /* 2 užduotis */
+        // let moreThan10 = 0;
+        // let max = Math.max(...n);
+        // let indexes = [];
+        // let equalSum = 0;
+        // let m = [];
+        // let j = 0;
+        // let equalArray = [];
+        // let oddArray = [];
+        // let firstSmalest10 = [];
+
+        // for(let i = 0; i < n.length; i++){
+        //     /* a */
+        //     if(n[i] > 10){
+        //         moreThan10 += 1;
+        //     }
+        //     /* b */
+        //     if (n[i] === max){
+        //         indexes.push(i);
+        //     }
+        //     /* c */
+        //     if(i % 2 == 0){
+        //         equalSum += n[i];
+        //     }
+        //     /* d */
+        //     m.push(n[i] - i);
+        // }
+        // console.log("a) Masyve didesnių už 10 reikšmių yra: " + moreThan10);
+        // console.log("b) Didžiausia masyvo reikšmė: " + max + " ir jos indexai yra: " + indexes);
+        // console.log("c) Visų lyginių indexų suma: " + equalSum);
+        // console.log("d) Naujas masyvas: " + m);
+        // /* e */
+        // for(j = 0; j < 10; j ++){
+        //     n.push(Math.floor((Math.random()*21)+5));
+        // }
+        // console.log("e) Papildytas pradinis masyvas iki 40 reikšmių: " + n);
+        // for(let i = 0; i < n.length; i++){
+        //     /* f */
+        //     if(i % 2 == 0){
+        //         equalArray.push(n[i]);
+        //     } else{
+        //         oddArray.push(n[i]);
+        //     }
+        // }
+        // console.log("f)")
+        // console.log(equalArray);
+        // console.log(oddArray);
+        // for(let i = 0; i < n.length; i++){
+        //     /* g */
+        //     if(i % 2 == 0){
+        //         if(n[i] > 15){
+        //             n[i] = 0;
+        //         }
+        //     }
+        //    /* h */
+        //    if(n[i] > 10){
+        //         firstSmalest10.push(i);
+        //    } 
+        // }
+        // console.log("g) Pakeisti elementai su poriniais indeksais ir jeigu daugiau už 15 " + n);
+        // console.log("h) Pirmas mažiausias indexsas kurio elemento reikšme mažiau už 10:  " + firstSmalest10[0]);
+
+        /* 3 užduotis */
         let n = [];
-        while (n.length < 30){
-            n.push(Math.floor((Math.random()*21)+5));
+        let characters = "ABCD";
+        let charactersLength = characters.length;
+        let sumA = 0;
+        let sumB = 0;
+        let sumC = 0;
+        let sumD = 0;
+        for(let i = 0; i < 200; i ++){
+            n.push(characters.charAt(Math.floor(Math.random() * charactersLength)));
+        }
+        for(let i = 0; i < n.length; i++){
+            if(n[i] == "A"){
+                sumA += 1;
+            } else if (n[i] == "B"){
+                sumB += 1;
+            } else if (n[i] == "C"){
+                sumC += 1;
+            } else {
+                sumD += 1
+            }
         }
         console.log(n);
-        console.log(n.length);
+        console.log(sumA);
+        console.log(sumB);
+        console.log(sumC);
+        console.log(sumD);
 
-        /* 2 užduotis */
-        let moreThan10 = 0;
-        let equalSum = 0;
+        /* 4 užduotis */
+
         for(let i = 0; i < n.length; i++){
-            if(n[i] > 10){
-                moreThan10 += 1;
+            for(let j = 0; j < i; j++){
+                    if(n[i] < n[j]){
+                        let x =  n[i];
+                        n[i] = n[j];
+                        n[j] = x 
+                    }
             }
-            /* NESIGAUNA!!!! */
-            // if(n[i] % 2 == 0){
-            //     equalSum = n;
-            // }
-            // console.log(n[i]);
         }
-        console.log(moreThan10)
+        console.log(n);
+
+
     </script>
     
 </body>
