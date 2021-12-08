@@ -12,6 +12,12 @@
         div {
             padding: 0.5em;
         }
+        #answer{
+            background-color: rgb(38, 136, 136);
+            display: inline-block;
+            margin: 0px 0px 0px 10px;
+
+        }
     </style>
 </head>
 <body> 
@@ -23,12 +29,27 @@
         <label for="contSize">Size:</label>
         <input type="number" id="contSize" oninput="myFunction2()">
         <span>Style:</span>
-        <input type="radio" id="contStyleBold" name="contStyle" value = "bold">
+        <input type="checkbox" id="contStyleBold" name="contStyle" value = "bold" onclick="myFunction3()">
         <label for="contStyle">Bold</label>
-        <input type="radio" id="contStyleItalic" name="contStyle" value = "italic">
+        <input type="checkbox" id="contStyleItalic" name="contStyle" value = "italic" onclick="myFunction3()">
         <label for="contStyle">Italic</label>
-        <input type="radio" id="contStyleUnderline" name="contStyle" value = "underline" >
+        <input type="checkbox" id="contStyleUnderline" name="contStyle" value = "underline" onclick="myFunction3()">
         <label for="contStyle">Underline</label>
+    </div>
+    <div>
+        <label for="boxWidth">Width:</label>
+        <input type="number" id="boxWidth" oninput="myFunction4()">
+        <label for="boxHeight">Height:</label>
+        <input type="number" id="boxHeight" oninput="myFunction5()">
+    </div>
+    <div>
+        <span>Align:</span>
+        <input type="radio" id="textAlignLeft" name="textAlign" value = "left" onclick="myFunction6()">
+        <label for="textAlign">Left</label>
+        <input type="radio" id="textAlignCenter" name="textAlign" value = "center" onclick="myFunction6()">
+        <label for="textAlign">Middle</label>
+        <input type="radio" id="textAligRight" name="textAlign" value = "right" onclick="myFunction6()">
+        <label for="textAlign">Right</label>
     </div>
     <p id="answer"></p>
     <script>
@@ -41,6 +62,49 @@
             let contSize = document.getElementById("contSize").value;
             console.log(contSize);
             answer.style.fontSize = contSize + "px";
+        }
+        function myFunction3() {
+            let contStyle = document.getElementsByName("contStyle");
+            answer.style.fontStyle = "";
+            answer.style.fontWeight = "";
+            answer.style.textDecoration = "";
+            for(let i = 0; i < contStyle.length; i++){
+                if (contStyle[i].checked){
+                    if (contStyle[i].value == "italic"){
+                        answer.style.fontStyle = "italic";
+                    } else if (contStyle[i].value == "bold"){
+                        answer.style.fontWeight = "bold";
+                    } else if (contStyle[i].value == "underline"){
+                        answer.style.textDecoration = "underline";
+                    }
+                }
+            }
+
+        }
+        function myFunction4() {
+            let boxWidth = document.getElementById("boxWidth").value;
+            answer.style.width = boxWidth + "px";
+
+        }
+        function myFunction5() {
+            let boxHeight = document.getElementById("boxHeight").value;
+            answer.style.height = boxHeight + "px";
+
+        }
+
+        function myFunction6() {
+            let textAlign = document.getElementsByName("textAlign");
+            for(let i = 0; i < textAlign.length; i++){
+                if (textAlign[i].checked){
+                    if (textAlign[i].value == "left"){
+                        answer.style.textAlign = "left";
+                    } else if (textAlign[i].value == "center"){
+                        answer.style.textAlign = "center";
+                    } else if (textAlign[i].value == "right"){
+                        answer.style.textAlign = "right";
+                    }
+                }
+            }
         }
     </script>
     
