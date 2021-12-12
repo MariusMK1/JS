@@ -13,10 +13,12 @@
             padding: 0.5em;
         }
         #answer{
-            background-color: rgb(38, 136, 136);
+            display: table-cell;
+            margin: 0px 0px 0px 0px;
+            border: 1px solid white;
+        }
+        .inline {
             display: inline-block;
-            margin: 0px 0px 0px 10px;
-
         }
     </style>
 </head>
@@ -51,7 +53,41 @@
         <input type="radio" id="textAligRight" name="textAlign" value = "right" onclick="myFunction6()">
         <label for="textAlign">Right</label>
     </div>
-    <p id="answer"></p>
+    <div>
+        <span>Vertical:</span>
+        <input type="radio" id="textTop" name="textVertical" value = "top" onclick="myFunction7()">
+        <label for="textVertical">Top</label>
+        <input type="radio" id="textMiddle" name="textVertical" value = "middle" onclick="myFunction7()">
+        <label for="textVertical">Middle</label>
+        <input type="radio" id="textAligRight" name="textVertical" value = "bottom" onclick="myFunction7()">
+        <label for="textVertical">Bottom</label>
+    </div>
+    <div class="inline">
+        <label for="textColor">Text color:</label>
+        <input type="color" id="textColor" value = "#000000" oninput="myFunction8()">
+    </div>
+    <div class="inline">
+        <label for="backColor">Back color:</label>
+        <input type="color" id="backColor" value = "#ffffff" oninput="myFunction9()">
+    </div>
+    <div class="inline">
+        <label for="borderColor">Border color:</label>
+        <input type="color" id="borderColor" value = "#ffffff" oninput="myFunction10()">
+    </div>
+    <div class="inline">
+        <label for="borderSize">Size:</label>
+        <input type="range" id="borderSize" min="0" max="30" oninput="myFunction11()">
+    </div>
+    <div>
+        <label for="padding">Padding:</label>
+        <input type="range" id="padding" min="0" max="500" oninput="myFunction12()">
+    </div>
+    <div>
+        <p id="answer"></p>
+    </div>
+
+    <!--     SCRIPT STARTS HERE  -->
+
     <script>
     let answer = document.getElementById("answer");
         function myFunction1() {
@@ -60,7 +96,6 @@
         }
         function myFunction2() {
             let contSize = document.getElementById("contSize").value;
-            console.log(contSize);
             answer.style.fontSize = contSize + "px";
         }
         function myFunction3() {
@@ -106,6 +141,41 @@
                 }
             }
         }
+        function myFunction7() {
+            let textAlign = document.getElementsByName("textVertical");
+            for(let i = 0; i < textAlign.length; i++){
+                if (textAlign[i].checked){
+                    if (textAlign[i].value == "top"){
+                        answer.style.verticalAlign = "top";
+                    } else if (textAlign[i].value == "middle"){
+                        answer.style.verticalAlign= "middle";
+                    } else if (textAlign[i].value == "bottom"){
+                        answer.style.verticalAlign = "bottom";
+                    }
+                }
+            }
+        }
+        function myFunction8() {
+            let textColor = document.getElementById("textColor").value;
+            answer.style.color = textColor;
+        }
+        function myFunction9() {
+            let backColor = document.getElementById("backColor").value;
+            answer.style.backgroundColor= backColor;
+        }
+        function myFunction10() {
+            let borderColor = document.getElementById("borderColor").value;
+            answer.style.borderColor= borderColor;
+        }
+        function myFunction11() {
+            let borderSize = document.getElementById("borderSize").value;
+            answer.style.borderWidth= borderSize + "px";
+        }
+        function myFunction12() {
+            let padding = document.getElementById("padding").value;
+            answer.style.padding= padding + "px";
+        }
+
     </script>
     
 </body>
