@@ -78,45 +78,92 @@
         // console.log("h) Pirmas mažiausias indexsas kurio elemento reikšme mažiau už 10:  " + firstSmalest10[0]);
 
         /* 3 užduotis */
-        let n = [];
-        let characters = "ABCD";
-        let charactersLength = characters.length;
-        let sumA = 0;
-        let sumB = 0;
-        let sumC = 0;
-        let sumD = 0;
-        for(let i = 0; i < 200; i ++){
-            n.push(characters.charAt(Math.floor(Math.random() * charactersLength)));
-        }
-        for(let i = 0; i < n.length; i++){
-            if(n[i] == "A"){
-                sumA += 1;
-            } else if (n[i] == "B"){
-                sumB += 1;
-            } else if (n[i] == "C"){
-                sumC += 1;
-            } else {
-                sumD += 1
-            }
-        }
-        console.log(n);
-        console.log(sumA);
-        console.log(sumB);
-        console.log(sumC);
-        console.log(sumD);
+        // let n = [];
+        // let characters = "ABCD";
+        // let charactersLength = characters.length;
+        // let sumA = 0;
+        // let sumB = 0;
+        // let sumC = 0;
+        // let sumD = 0;
+        // for(let i = 0; i < 200; i ++){
+        //     n.push(characters.charAt(Math.floor(Math.random() * charactersLength)));
+        // }
+        // for(let i = 0; i < n.length; i++){
+        //     if(n[i] == "A"){
+        //         sumA += 1;
+        //     } else if (n[i] == "B"){
+        //         sumB += 1;
+        //     } else if (n[i] == "C"){
+        //         sumC += 1;
+        //     } else {
+        //         sumD += 1
+        //     }
+        // }
+        // console.log(n);
+        // console.log(sumA);
+        // console.log(sumB);
+        // console.log(sumC);
+        // console.log(sumD);
 
-        /* 4 užduotis */
+        // /* 4 užduotis */
 
-        for(let i = 0; i < n.length; i++){
-            for(let j = 0; j < i; j++){
-                    if(n[i] < n[j]){
-                        let x =  n[i];
-                        n[i] = n[j];
-                        n[j] = x 
-                    }
-            }
-        }
-        console.log(n);
+        // for(let i = 0; i < n.length; i++){
+        //     for(let j = 0; j < i; j++){
+        //             if(n[i] < n[j]){
+        //                 let x = n[i];
+        //                 n[i] = n[j];
+        //                 n[j] = x 
+        //             }
+        //     }
+        // }
+        // console.log(n);
+
+        /* 5 užduotis */
+        // let n = [];
+        // let m = [];
+        // while(n.length < 100){
+        //     let x = Math.floor((Math.random()*899)+100);
+        //      if(!n.includes(x)){
+        //          n.push(x);
+        //      }
+        // }
+        // while(m.length < 100){
+        //     let x = Math.floor((Math.random()*899)+100);
+        //     if(!m.includes(x)){
+        //         m.push(x);
+        //      }
+        // }
+        // console.log(n);
+        // console.log(m);
+
+        // /* 6 užduotis */
+        // let d = [];
+        // for(let i = 0; i < 100; i++){
+        //     if(!m.includes(n[i])){
+        //         d.push(n[i]);
+        //     }
+        // }
+        // console.log(d);
+
+        // /* 7 užduotis */
+        // let z = [];
+        // for(let i = 0; i < 100; i++){
+        //     if(m.includes(n[i])){
+        //         z.push(n[i]);
+        //     }
+        // }
+        // console.log(z);
+
+        /* 8 užduotis */
+        // let n = [];
+        // for(let i = 0; i < 2; i++){
+        //     n.push(Math.floor((Math.random()*21)+5));
+        // }
+        // for(let i = 2; i < 10; i++){
+        //     n.push(n[i-1] + n[i - 2]);
+        // }
+        // console.log(n);
+
 
 
     </script>

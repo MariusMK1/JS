@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <script>
+        /* 1 užduotis */
+        let n = [];
+        for(let i = 0; i < 10; i++){
+            let b = [];
+            for(let j = 0; j < 5; j++){
+                b.push(Math.floor((Math.random()*21)+5));
+            }
+            n.push(b);
+        }
+        console.log(n);
+
+        /* 2 užduotis */
+        /* a */
+        let moreThan10 = 0;
+        for(let i = 0; i < 10; i++){
+            for(let j = 0; j < 5; j++){
+                if(n[i][j] > 10){
+                    moreThan10 += 1;
+                }
+            }
+        }
+        console.log("a) Elementų daugiau už 10 yra: " + moreThan10);
+
+        /* b */
+        let max = 0;
+        for(let i = 0; i < 10; i++){
+            let maxIf = Math.max(...n[i]);
+            if(maxIf > max){
+                max = maxIf
+            }
+        }
+        console.log("b) Didžiausio elemento reikšmė: " + max);
+        
+    </script>
+    
+</body>
+</html>
