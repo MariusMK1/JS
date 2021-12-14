@@ -7,39 +7,147 @@
 </head>
 <body>
     <script>
-        /* 1 užduotis */
+        // /* 1 užduotis */
+        // let n = [];
+        // for(let i = 0; i < 10; i++){
+        //     let b = [];
+        //     for(let j = 0; j < 5; j++){
+        //         b.push(Math.floor((Math.random()*21)+5));
+        //     }
+        //     n.push(b);
+        // }
+        // console.log(n);
+
+        // /* 2 užduotis */
+        // /* a */
+        // let moreThan10 = 0;
+        // for(let i = 0; i < 10; i++){
+        //     for(let j = 0; j < 5; j++){
+        //         if(n[i][j] > 10){
+        //             moreThan10 += 1;
+        //         }
+        //     }
+        // }
+        // console.log("a) Elementų daugiau už 10 yra: " + moreThan10);
+
+        // /* b */
+        // let max = 0;
+        // for(let i = 0; i < 10; i++){
+        //     let maxIf = Math.max(...n[i]);
+        //     if(maxIf > max){
+        //         max = maxIf
+        //     }
+        // }
+        // console.log("b) Didžiausio elemento reikšmė: " + max);
+
+        // /* c */
+        // let sum0 = 0, sum1 = 0, sum2 = 0, sum3 = 0, sum4 = 0;
+        // for(let i = 0; i < 10; i++){
+        //     for(let j = 0; j < 5; j++){
+        //         if(j == 0){
+        //             sum0 += n[i][j];
+        //         }
+        //         if(j == 1){
+        //             sum1 += n[i][j];
+        //         }
+        //         if(j == 2){
+        //             sum2 += n[i][j];
+        //         }
+        //         if(j == 3){
+        //             sum3 += n[i][j];
+        //         }
+        //         if(j == 4){
+        //             sum4 += n[i][j];
+        //         }
+        //     }
+        // }
+        // console.log(sum0);
+        // console.log(sum1);
+        // console.log(sum2);
+        // console.log(sum3);
+        // console.log(sum4);
+
+        // /* d */
+        // for(let i = 0; i < 10; i++){    
+        //     for(j = 0; j < 2; j++){
+        //         n[i].push(Math.floor((Math.random()*21)+5));
+        //     }
+        // }
+
+        // console.log(n);
+        // console.log(n[0].length);
+        
+
+
+        // /* e */
+        // let m = [];
+        // for(let i = 0; i < 10; i++){
+        //     let sum = 0;    
+        //     for(j = 0; j < 7; j++){
+        //         sum += n[i][j]; 
+        //     }
+        //     m.push(sum);
+        // }
+        // console.log(m);
+
+        /* 3 užduotis */
         let n = [];
+        let characters =  "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let charactersLength = characters.length;
         for(let i = 0; i < 10; i++){
             let b = [];
-            for(let j = 0; j < 5; j++){
-                b.push(Math.floor((Math.random()*21)+5));
+            for(let j = 0; j < Math.floor((Math.random()*19)+2); j++){
+                b.push(characters.charAt(Math.floor(Math.random() * charactersLength)));
             }
             n.push(b);
         }
-        console.log(n);
-
-        /* 2 užduotis */
-        /* a */
-        let moreThan10 = 0;
-        for(let i = 0; i < 10; i++){
-            for(let j = 0; j < 5; j++){
-                if(n[i][j] > 10){
-                    moreThan10 += 1;
+        for(let z = 0; z < 10; z++){
+            for(let i = 0; i < n[z].length; i++){
+                for(let j = 0; j < i; j++){
+                    if(n[z][i] < n[z][j]){
+                        let x = n[z][i];
+                        n[z][i] = n[z][j];
+                        n[z][j] = x 
+                    }
                 }
             }
         }
-        console.log("a) Elementų daugiau už 10 yra: " + moreThan10);
+        console.log(n);
 
-        /* b */
-        let max = 0;
+        /* 4 užduotis */
+        let a = [];
+        let c = [];
+        let g = [];
         for(let i = 0; i < 10; i++){
-            let maxIf = Math.max(...n[i]);
-            if(maxIf > max){
-                max = maxIf
+            if(n[i].includes("K")){
+                a.push(n[i]);
+            } else {
+                c.push(n[i]);
             }
         }
-        console.log("b) Didžiausio elemento reikšmė: " + max);
-        
+        for(let i = 0; i < a.length; i++){
+            for(let j = 0; j < a.length; j++){
+                if(a[i].length < a[j].length){
+                    let x = a[i];
+                    a[i] = a[j];
+                    a[j] = x 
+                }
+            }
+        }
+        for(let i = 0; i < c.length; i++){
+            for(let j = 0; j < c.length; j++){
+                if(c[i].length < c[j].length){
+                    let x = c[i];
+                    c[i] = c[j];
+                    c[j] = x 
+                }
+            }
+        }
+        g.push(...a);
+        g.push(...c);
+        console.log(a);
+        console.log(c);
+        console.log(g);
     </script>
     
 </body>
